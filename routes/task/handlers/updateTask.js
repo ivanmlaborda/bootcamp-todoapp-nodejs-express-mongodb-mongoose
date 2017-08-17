@@ -6,7 +6,7 @@ function updateTask (req, res) {
 
   if (done) {
     Task
-      .findByIdAndUpdate(id, {done:true})
+      .findByIdAndUpdate(id, {done:done})
       .then(task => res.send(task))
   }
 

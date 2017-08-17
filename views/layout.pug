@@ -6,7 +6,9 @@ html(lang='en')
     title TO DO App Full Login 📓
     include includes/styles
   body
-    include includes/header
-    .container
-      block content
+    .page-container
+      include includes/header
+      .container.page-body
+        block content
+      include includes/footer
     include includes/scripts

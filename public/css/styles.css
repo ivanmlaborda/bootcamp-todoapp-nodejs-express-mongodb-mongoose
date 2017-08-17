@@ -1,18 +1,80 @@
 body {
-  background-color: black !important;
+  background-color: black;
+}
+
+.page-container {
+  min-height: 95vh;
+  position: relative;
+  z-index: 1;
+  background-color: #000;
 }
 
 .container {
-  margin-top: 35px;
-  padding-bottom: 35px;
+  margin-top: 25px;
+  /*padding-bottom: 35px;*/
+  width: 100%;
 }
 
-.header, .add-bar, .list-container {
-  margin-top: 35px;
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #2B2823;
+  z-index: 2;
+}
+
+.input-group {
+  z-index: 1;
+}
+
+.header {
+  margin-top: 110px;
+}
+
+.add-bar, .list-container {
+  margin-top: 90px;
+}
+
+.list-container {
+  margin-bottom: 110px;
 }
 
 .header h1, .header h4 {
+  margin-top: 25px;
+  margin-bottom: 60px;
   color: white;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+footer>a {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+footer>i.fa {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+footer>p {
+  font-size: 12px;
+  color: #CACACA;
 }
 
 ul.nav.nav-pills {
@@ -35,7 +97,7 @@ ul.nav.nav-pills {
   background-color: white;
 }
 
-.nav-pills>li>a.user-name-logged, .nav-pills>li>a.user-name-logged:hover  {
+.nav-pills>li>a.user-name-logged, .nav-pills>li>a.user-name-logged:hover {
   color: #C0D23E;
   border-color: black;
   background-color: black;
@@ -64,10 +126,12 @@ ul.nav.nav-pills {
 form {
   display: inline-block;
 }
+
 .form-group {
   text-align: center;
   padding-bottom: 25px;
 }
+
 #todo {
   margin: 0 auto;
 }
@@ -80,6 +144,7 @@ a.close {
   margin-left: 20px;
   font-size: 16px;
 }
+
 .task-item i {
   font-size: 13px;
   font-weight: bold;
@@ -88,6 +153,7 @@ a.close {
 .task-item:hover {
   background: #eee;
 }
+
 .task-item i {
   font-size: 13px;
   font-weight: bold;
@@ -104,12 +170,15 @@ a.close {
   height: 0px;
 }
 
-
-.task-done {:nth-child(3)
+.task-done {
   background: #CCC;
   text-decoration: line-through;
 }
 
 button.btn.btn-warning.pull-right {
   margin-right: 10px;
+}
+
+.edit {
+  margin-left: 10px;
 }

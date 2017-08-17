@@ -3,14 +3,7 @@ extends ../layout
 block content
   .container
     .header
-      h1 List Tasks
-      h4
-        | Welcome to the TO DO App by 
-        strong
-          
-          a(href='https://github.com/ivanmlaborda')
-            | @ivanmlaborda
-        | . Please enjoy.
+      h1 Schedule your agenda
     .add-bar    
       .row
         .col-xs-4
@@ -25,10 +18,12 @@ block content
       .row          
         ul#todo.list-group
           each task in tasks
-            li.list-group-item.task-item(class= task.done && 'task-done')
+            li.list-group-item.task-item
               button.done.btn.btn-primary
                 i.fa.fa-check
               span= task.title
+              //- p 
+              //-   small hola
               input.task-id(type='hidden', value=task.id)
               input.task-edit.hidded(type='text', name='task', placeholder=task.title, autofocus, value=task.title)
               button.remove.btn.btn-danger.pull-right

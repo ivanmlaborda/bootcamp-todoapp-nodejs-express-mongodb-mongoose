@@ -3,17 +3,18 @@ extends ../layout
 block content
   .container
     .header
-      h1 Completed
-      h4
-        | Welcome to the TO DO App by 
-        strong
-          a(href='https://github.com/ivanmlaborda')
-            | @ivanmlaborda
-        | . Please enjoy.
-      .list-container  
+      h1 Your completed tasks
+    .list-container  
       .row          
         .col-md-4.col-md-offset-4
-          each task in doneTasks
-            li.list-group-item.task-item
-              span= task.title
-          
+          ul.list-group
+            each task in doneTasks
+              li.list-group-item.task-item
+                button.undone.btn.btn-primary
+                  i.fa.fa-calendar
+                span= task.title
+                input.task-id(type='hidden', value=task.id)
+                input.task-edit.hidded(type='text', name='task', placeholder=task.title, autofocus, value=task.title)
+                button.remove.btn.btn-danger.pull-right
+                  i.fa.fa-remove
+        

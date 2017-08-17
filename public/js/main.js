@@ -22,7 +22,24 @@ $('.done').on('click', function(e) {
 
   $.ajax({ url, method, data })
     .then( msg => {
-      $(this).parent().addClass('task-done')
+      $(this).parent().remove()
+      console.log(msg);
+    })
+
+})
+
+$('.undone').on('click', function(e) {
+  const idTask = $(this).siblings('.task-id').val()
+  const url = `/task/${idTask}`
+  const method = 'PUT'
+  const data = { done: false }
+
+  $.ajax({ url, method, data })
+    .then( msg => {
+      $(this).parent().removeClass('task-done')
+      $(this).parent().remove()
+      $(this).removeClass('undone').addClass('done')
+
       console.log(msg);
     })
 
@@ -36,7 +53,7 @@ $('.all-done').on('click', function(e) {
 
   $.ajax({ url, method, data })
   .then( () => {
-    $('.task-item').addClass('task-done')
+    $('.task-item').remove()
   })
 
 })
@@ -52,7 +69,6 @@ $('.edit').on('click', function(e) {
   $(this).siblings('span').toggleClass('hidded')
   $(this).siblings('.task-edit').toggleClass('hidded')
   $(this).toggleClass('btn-warning pull-right btn-success')
-  // $(this).toggleClass('btn-success')
   $(this).on('click', function(e) {
     const titleEdited = $(this).siblings('.task-edit').val()
     $(this).siblings('span').text(titleEdited)
