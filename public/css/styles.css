@@ -111,6 +111,17 @@ ul.nav.nav-pills {
   padding: 5px 0;
 }
 
+.nav-pills>:nth-child(3)>a {
+  color: white;
+  border: 3px solid #2B2823;
+}
+
+.nav-pills>:nth-child(3)>a:hover {
+  color: white;
+  background-color: #2B2823;
+  border: 3px solid #2B2823;
+}
+
 .list-container button.btn {
   padding: 3px 6px;
 }
