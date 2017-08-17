@@ -1,0 +1,18 @@
+.header-nav
+  ul.nav.nav-pills
+    li(role='presentation')
+      a(href='/tasks') List
+    li(role='presentation')
+      a(href='/tasks/completed') Done
+    //- if userLogged != null
+    //-   li(role='presentation').pull-right
+    //-     a(href='/logout') Log out
+    //-   li(role='presentation').pull-right
+    //-     a.user-name-logged #{ userLogged }
+    //- else
+    //-   li(role='presentation').pull-right
+    //-     a(href='/signup') Register
+    //-   li(role='presentation').pull-right
+    //-     a(href='/login') Log in  
+    //-   li(role='presentation').pull-right
+    //-     a.user-name-not-logged not logged

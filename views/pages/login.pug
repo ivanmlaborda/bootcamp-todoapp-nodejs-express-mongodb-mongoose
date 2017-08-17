@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .container
+    .row.login-block
+      .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset3
+        .panel.panel-success.login
+          .panel-heading
+            h3.panel-title Please Log in
+          .panel-body.text-center
+            form(action='/login', method='POST')
+              fieldset.block-center
+                .form-group
+                  input.form-control(placeholder='E-mail', name='email', type='email', required, autofocus)
+                .form-group
+                  input.form-control(placeholder='Password', name='password', type='password', value='', required)
+                button.btn.btn-lg.btn-success.btn-block Enviar
+                p
+                  | Need an account? 
+                  a(href='/signup') Register
+                
+                
