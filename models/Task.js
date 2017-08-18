@@ -11,11 +11,11 @@ var TaskSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   }
-  // ,
-  // createdAt: {
-  //   type: Number,
-  //   default: Date.now()
-  // }
+  ,
+  createdAt: {
+    type: Number,
+    default: Date.now()
+  }
 }, { collection })
 
 module.exports = mongoose.model('Task', TaskSchema)

@@ -6,10 +6,12 @@ block content
       h1 Your completed tasks
     .list-container  
       .row          
-        .col-md-4.col-md-offset-4
+        .col-sm-8.col-sm-offset-2    
           ul.list-group
             each task in doneTasks
               li.list-group-item.task-item
+                p.inline-block 
+                  small Time
                 button.undone.btn.btn-primary
                   i.fa.fa-calendar
                 span= task.title

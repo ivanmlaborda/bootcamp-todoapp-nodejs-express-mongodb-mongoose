@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
 const bodyParser = require('body-parser')
-
+const moment = require('moment')
 const app = express()
 
 const PORT = 3002
@@ -19,6 +19,7 @@ app.set('view engine', 'pug')
 app.use(express.static(path.join(process.cwd(), 'public')))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.locals.moment = moment
 
 app.use('/tasks', routesTasks)
 app.use('/task', routesTask)

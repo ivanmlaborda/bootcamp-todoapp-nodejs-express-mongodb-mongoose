@@ -173,6 +173,7 @@ a.close {
 .task-edit {
   margin-left: 20px;
   font-size: 16px;
+  max-width: 150px;
   background-color: #F0F0D8;
 }
 
